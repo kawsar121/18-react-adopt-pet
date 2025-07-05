@@ -64,6 +64,10 @@ const router = createBrowserRouter([
         element: <h1 className="mt-44 text-red-600 text-4xl">Menu updating! </h1>,
       },
       {
+        path: "/success",
+        element: <Success></Success>
+      },
+      {
         path: "/register",
         element: <Register></Register>,
       },
