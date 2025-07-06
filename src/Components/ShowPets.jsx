@@ -5,7 +5,7 @@ const ShowPets = ({ petCategory }) => {
   const { image, gender, date_of_birth, breed, pet_name, vaccinated_status } =
     petCategory;
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="p-3 bg-base-100 shadow-xl">
       <figure>
         <img src={image} alt="Pet Max" className=" w-full h-64" />
       </figure>

@@ -18,12 +18,12 @@ const Home = () => {
         <Header></Header>
       </header>
       <main>
-        <div className="flex justify-center gap-9 mt-24 mb-16">
+        <div className="flex justify-center gap-4 mt-24 mb-16">
           {nav.map((animalNav) => (
             <NavLink
               // className="bg-blue-400 text-black py-2 px-5 font-bold"
               className={({ isActive }) =>
-                isActive ? "bg-yellow-400 text-black py-2 px-5 font-bold" : "bg-blue-400 text-black py-2 px-5 font-bold"
+                isActive ? "bg-red-600 text-white py-2 px-5 font-bold" : "bg-blue-400 text-black py-2 px-5 font-bold"
               }
               key={animalNav.id}
               to={`/animal/${animalNav.category}`}
