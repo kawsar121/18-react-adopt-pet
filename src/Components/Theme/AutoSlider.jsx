@@ -5,22 +5,25 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import dog from '../../assets/dog.png';
+import cat from '../../assets/cat.png';
+import rabit from '../../assets/rabit.png';
 
 const slides = [
   {
     id: 1,
     title: "Happy Paws Animal Hospital",
-    image: "/src/assets/ChatGPT Image ১৭ আগ, ২০২৫, ০১_২৫_৪১ AM.png"
+    image: cat
   },
   {
     id: 2,
     title: "Green Valley Veterinary Clinic",
-    image: "/src/assets/dog.png"
+    image: dog
   },
   {
     id: 3,
     title: "Sunrise Animal Care Center",
-    image: "/src/assets/मुंह में मासूमियत, आँखों में गहरी बातें.png"
+    image: rabit
   }
 ];
 
