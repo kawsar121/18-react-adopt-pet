@@ -19,6 +19,7 @@ import Context from "./Components/ContextApiSet/Context.jsx";
 import Login from "./Components/Login.jsx";
 import PrivateRoute from "./Components/Private/PrivateRoute.jsx";
 import Success from "./Components/Success.jsx";
+import AnimalHospital from "./Components/AnimalHospital.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path:"/hospital",
+        loader: ()=> fetch('/public/pethosipital.json') ,
+        element: <AnimalHospital></AnimalHospital>
       },
       {
         path: "/menu",
