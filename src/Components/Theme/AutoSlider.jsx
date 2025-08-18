@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import dog from '../../assets/dog.png';
 import cat from '../../assets/cat.png';
 import rabit from '../../assets/rabit.png';
+import { Rabbit } from "lucide-react";
 
 const slides = [
   {
@@ -29,7 +30,7 @@ const slides = [
 
 function AutoSlider() {
   return (
-    <div className="w-full max-w-4xl mx-auto my-8">
+    <div className="w-full max-w-7xl mx-auto my-8">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -46,11 +47,21 @@ function AutoSlider() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative">
+            <div className="relative flex gap-1">
               <img
-                src={slide.image}
+                src={cat}
                 alt={slide.title}
-                className="w-full h-72 object-cover rounded-xl"
+                className=" h-72 object-cover rounded-xl"
+              />
+              <img
+                src={dog}
+                alt={slide.title}
+                className=" h-72 object-cover rounded-xl"
+              />
+              <img
+                src={rabit}
+                alt={slide.title}
+                className=" h-72 object-cover rounded-xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-lg font-semibold p-3 rounded-b-xl">
                 {slide.title}

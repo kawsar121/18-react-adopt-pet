@@ -20,6 +20,9 @@ import Login from "./Components/Login.jsx";
 import PrivateRoute from "./Components/Private/PrivateRoute.jsx";
 import Success from "./Components/Success.jsx";
 import AnimalHospital from "./Components/AnimalHospital.jsx";
+import AccessoriesIteams from "./Components/PetAccos/AccessoriesIteams.jsx";
+import Accessories from "./Components/PetAccos/Accessories.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -42,7 +45,11 @@ const router = createBrowserRouter([
                 `https://openapi.programming-hero.com/api/peddy/category/${params.id}`
               ),
           },
-          {
+          
+        ],
+        
+      },
+      {
             path: "/petCategory/:id",
             element: (
               <PrivateRoute>
@@ -54,8 +61,6 @@ const router = createBrowserRouter([
                 `https://openapi.programming-hero.com/api/peddy/pet/${params.id}`
               ),
           },
-        ],
-      },
       {
         path: "/about",
         element: <About></About>,
@@ -65,6 +70,12 @@ const router = createBrowserRouter([
         element: <AnimalHospital></AnimalHospital> ,
         loader: ()=> fetch('/pethosipital.json')
       },
+      {
+        path:"/items",
+        element: <AccessoriesIteams></AccessoriesIteams>,
+        loader: () => fetch('/petitems.json')
+      },
+     
       {
         path: "/menu",
         element: <h1 className="mt-44 text-red-600 text-4xl">Menu updating! </h1>,

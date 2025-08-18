@@ -20,7 +20,7 @@ const Home = () => {
         <Header></Header>
       </header>
       <main>
-        <div className="flex justify-center gap-3 lg:gap-9 mt-24 mb-16">
+        <div className="flex justify-center gap-2 lg:gap-9 mt-24 mb-16">
           {nav.map((animalNav) => (
             <NavLink
               // className="bg-blue-400 text-black py-2 px-5 font-bold"

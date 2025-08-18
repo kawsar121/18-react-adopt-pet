@@ -40,6 +40,9 @@ const themes = ["light", "dark"];
         <NavLink to="/hospital">Animal hospital</NavLink>
       </li>
       <li className="text-base text-red-600 font-bold">
+        <NavLink to="/items">Accessories Iteam</NavLink>
+      </li>
+      <li className="text-base text-red-600 font-bold">
         <NavLink to="/success">Adpot Cart</NavLink>
       </li>
       <li className="text-base text-red-600 font-bold">

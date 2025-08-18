@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ShowPets from './ShowPets';
 import noData from '../assets/error.webp'
+import AccessoriesIteams from './PetAccos/AccessoriesIteams';
 
 const Pet = () => {
     const {data} = useLoaderData();
@@ -18,6 +19,9 @@ const Pet = () => {
                 {
                     data.map(showData=> <ShowPets key={showData.petId} petCategory={showData}></ShowPets>)
                 }
+            </div>
+            <div className='mt-20'>
+                <AccessoriesIteams></AccessoriesIteams>
             </div>
             
         </div>
