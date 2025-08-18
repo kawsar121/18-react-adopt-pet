@@ -5,7 +5,7 @@ import AutoSlider from './Theme/AutoSlider';
 const Header = () => {
     return (
         <div className='mt-10'>
-            <div className='mt-12 mb-14'>
+            <div className='mt-20 mb-14'>
                 <AutoSlider></AutoSlider>
             </div>
             <p className='text-gray-700'>Bringing Families Together</p>

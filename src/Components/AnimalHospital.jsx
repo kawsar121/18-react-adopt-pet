@@ -13,7 +13,7 @@ const AnimalHospital = () => {
                 <AutoSlider></AutoSlider>
             </div>
   {/* Title */}
-  <h1 className="text-3xl sm:text-4xl font-bold text-center mt-16 mb-5 text-red-500">
+  <h1 className="text-3xl sm:text-4xl font-bold text-center mt-10 lg:mt-16 mb-5 text-red-500">
     🐾 Animal Treatment & Consultation Center
   </h1>
 
@@ -23,7 +23,7 @@ const AnimalHospital = () => {
   </p>
 
   {/* Hospital Grid */}
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <div className="grid justify-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {Array.isArray(hos) && hos.map((hospital) => (
       <HospitalView key={hospital.id} pital={hospital} />
     ))}

@@ -6,7 +6,7 @@ const Success = () => {
   const { adoptions, deleteAdoption } = useContext(CreatContext);
 
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen p-6 mt-32 lg:mt-36">
       <h2 className="text-2xl font-bold text-center text-green-700 mb-6">🎉 Adoption Success Messages</h2>
 
       {adoptions.length === 0 ? (
