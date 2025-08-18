@@ -24,7 +24,7 @@ const AnimalHospital = () => {
 
   {/* Hospital Grid */}
   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-    {(hos || []).map((hospital) => (
+    {Array.isArray(hos) && hos.map((hospital) => (
       <HospitalView key={hospital.id} pital={hospital} />
     ))}
   </div>
