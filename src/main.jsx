@@ -62,8 +62,8 @@ const router = createBrowserRouter([
       },
       {
         path:"/hospital",
-        loader: ()=> fetch('/public/pethosipital.json') ,
-        element: <AnimalHospital></AnimalHospital>
+        element: <AnimalHospital></AnimalHospital> ,
+        loader: ()=> fetch('/pethosipital.json')
       },
       {
         path: "/menu",
