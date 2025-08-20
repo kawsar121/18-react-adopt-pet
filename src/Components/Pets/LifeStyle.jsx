@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const LifeStyle = () => {
     return (
@@ -8,7 +9,7 @@ const LifeStyle = () => {
                 <p>Track and explore your amazing pets lifestyle with amarpet</p>
             </div>
             {/* Card */}
-            <div className='grid md:grid-cols-4 gap-10 lg:gap-8 mt-8 justify-center'>
+            <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-10 lg:gap-8 mt-8 justify-center'>
                 {/* Card 1 */}
                 <div className='flex w-64 flex-col justify-center'>
                     <img src="https://amarpet.blob.core.windows.net/production/97788494d0cb9c4ad37af9a76290b361/5.svg" alt="" srcset="" className='rounded-lg' />
@@ -67,6 +68,7 @@ const LifeStyle = () => {
                 </div>
                 
             </div>
+            <button className='rounded-full text-4xl text-green-400 fixed bottom-20 right-7 z-50'><a href="https://chat.whatsapp.com/BnyQZ0kJdHIGSkMj5jRw6G"><FaWhatsapp /></a></button>
         </div>
     );
 };
