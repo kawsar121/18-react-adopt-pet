@@ -8,7 +8,7 @@ const HospitalView = ({pital}) => {
         <img
           src={hospital_image}
           alt="Shoes"
-          className="rounded-xl w-56 h-40"
+          className="rounded-xl w-56 h-40 transform scale-110 hover:scale-100 transition-transform duration-500"
         />
       </figure>
       <div className="card-body items-center text-center">

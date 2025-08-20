@@ -2,29 +2,29 @@
   {
     "id": 1,
     "accessories_name": "Happy Paws Animal Hospital",
-    "discount_price": "$20",
-    "price": "$50",
+    "discount_price": "$480",
+    "price": "$500",
     "accessories_image": "https://amarpet.com/_next/image?url=https%3A%2F%2Famarpet.blob.core.windows.net%2Fproduction%2F36ac8e558ac7690b6f44e2cb5ef93322%2FSelf-cleaning-automatique-brush.png&w=640&q=75"
   },
   {
     "id": 2,
     "accessories_name": "Happy Paws Animal Hospital",
-    "discount_price": "$20",
-    "price": "$50",
+    "discount_price": "$520",
+    "price": "$560",
     "accessories_image": "https://amarpet.com/_next/image?url=https%3A%2F%2Famarpet.blob.core.windows.net%2Fproduction%2F7d62a275027741d98073d42b8f735c68%2F1.png&w=640&q=75"
   },
   {
     "id": 3,
     "accessories_name": "Happy Paws Animal Hospital",
-    "discount_price": "$20",
-    "price": "$50",
+    "discount_price": "$650",
+    "price": "$690",
     "accessories_image": "https://amarpet.com/_next/image?url=https%3A%2F%2Famarpet.blob.core.windows.net%2Fproduction%2F1baff70e2669e8376347efd3a874a341%2Fry5YSH94lLEI6pHxDQwiEqVlKoLfnh-metaUGV0LUhhaXItYnJ1c2gucG5n-.png&w=640&q=75"
   },
   {
     "id": 4,
     "accessories_name": "Happy Paws Animal Hospital",
-    "discount_price": "$20",
-    "price": "$50",
+    "discount_price": "$250",
+    "price": "$300",
     "accessories_image": "https://amarpet.com/_next/image?url=https%3A%2F%2Famarpet.blob.core.windows.net%2Fproduction%2F63cb524a9f51b7858733e1108bf556fa%2FCat-Self-Grooming-Soft-Face-Scratchers-Brush-Massage-Comb.png&w=640&q=75"
   },
   {

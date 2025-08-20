@@ -12,16 +12,17 @@ import {
 import Home from "./Components/Home.jsx";
 import About from "./Components/About.jsx";
 import Root from "./Components/Root.jsx";
-import Pet from "./Components/Pet.jsx";
-import ShowDetails from "./Components/ShowDetails.jsx";
+import Pet from "./Components/Pets/Pet.jsx";
+import ShowDetails from "./Components/Pets/ShowDetails.jsx";
 import Register from "./Components/Register.jsx";
 import Context from "./Components/ContextApiSet/Context.jsx";
 import Login from "./Components/Login.jsx";
 import PrivateRoute from "./Components/Private/PrivateRoute.jsx";
 import Success from "./Components/Success.jsx";
-import AnimalHospital from "./Components/AnimalHospital.jsx";
+import AnimalHospital from "./Components/Hospital/AnimalHospital.jsx";
 import AccessoriesIteams from "./Components/PetAccos/AccessoriesIteams.jsx";
 import Accessories from "./Components/PetAccos/Accessories.jsx";
+import AccessoriesDetails from "./Components/PetAccos/AccessoriesDetails.jsx";
 
 
 const router = createBrowserRouter([
@@ -73,9 +74,11 @@ const router = createBrowserRouter([
       {
         path:"/items",
         element: <AccessoriesIteams></AccessoriesIteams>,
-        loader: () => fetch('/petitems.json')
       },
-     
+      {
+        path:"/details",
+        element: <PrivateRoute><AccessoriesDetails></AccessoriesDetails></PrivateRoute>
+      },
       {
         path: "/menu",
         element: <h1 className="mt-44 text-red-600 text-4xl">Menu updating! </h1>,

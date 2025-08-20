@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
-import { CreatContext } from "./ContextApiSet/Context";
+import { CreatContext } from "../ContextApiSet/Context";
 const ShowDetails = () => {
   const petDetails = useLoaderData();
   const allok = petDetails.petData;

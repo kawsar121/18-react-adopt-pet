@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import HospitalView from "./HospitalView";
-import AutoSlider from "./Theme/AutoSlider";
+import AutoSlider from "../Theme/AutoSlider";
 
 const AnimalHospital = () => {
   const hos = useLoaderData();
@@ -8,8 +8,8 @@ const AnimalHospital = () => {
   return (
 
     
-    <div className="min-h-screen max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div className='mt-12 mb-14'>
+    <div className=" max-w-7xl mx-auto sm:px-6 lg:px-7">
+        <div className='mt-20 mb-14'>
                 <AutoSlider></AutoSlider>
             </div>
   {/* Title */}
