@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import logos from "../assets/logo.webp";
 import { CreatContext } from "./ContextApiSet/Context";
 import { Sun, Moon } from "lucide-react"; // icons
+import { PiHandbagSimpleLight } from "react-icons/pi";
+import { FiShoppingCart } from "react-icons/fi";
 
 const Nav = () => {
   const {user,logOuts} = useContext(CreatContext)
@@ -135,7 +137,32 @@ const themes = ["light", "dark"];
       </button>
       </div>
       {/* Theme Controll end */}
+
+      {/* Start Drawer */}
+              <div className=" drawer-end p-3 rounded-full shadow-md bg-gray-200">
+                <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content">
+                  {/* Page content here */}
+                  <label htmlFor="my-drawer-4" className="drawer-button">
+                    <FiShoppingCart className="text-red-300 text-lg" />
+                  </label>
+                </div>
+                <div className="drawer-side">
+                  <label
+                    htmlFor="my-drawer-4"
+                    aria-label="close sidebar"
+                    className="drawer-overlay"
+                  ></label>
+                  <div className="menu items-center bg-base-200 text-base-content min-h-full w-56 p-10">
+                    {/* Sidebar content here */}
+                    <FiShoppingCart className="text-4xl" />
+                    <h1 className="text-2xl text-red-500 whitespace-nowrap">No data Showing</h1>
+                  </div>
+                </div>
+              </div>
+      {/* End Drawer */}
       </div>
+       
      
     </div>
   );
