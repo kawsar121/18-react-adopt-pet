@@ -5,11 +5,11 @@ const AccessoriesDetails = ({loo}) => {
     return (
         <div>
             
-              <div className=" bg-white p-0 ">
+              <div className=" bg-white px-3 py-2 ">
                 <form method="dialog">
                     
                   {/* if there is a button in form, it will close the modal */}
-                  <Link to="/items" className="btn bg-gray-300 btn-sm btn-circle btn-ghost absolute right-[2rem] md:right-[20rem] top-20 ">
+                  <Link to="/items" className="btn bg-gray-300 btn-sm btn-circle btn-ghost absolute right-[3rem] md:right-[20rem] top-24 ">
                     ✕ 
                   </Link>
                 </form>
@@ -28,7 +28,7 @@ const AccessoriesDetails = ({loo}) => {
 
                     <div className="absolute top-3 right-[-14px] flex flex-col gap-2 opacity-100 transition duration-300">
                      
-                      <button className="w-10 h-10 hover:bg-red-500  rounded-full flex items-center justify-center ">
+                      <button className="w-10 h-10 mr-5 md:mr-0 hover:bg-red-500  rounded-full flex items-center justify-center ">
                         <svg
                           width="30"
                           height="30"

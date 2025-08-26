@@ -9,20 +9,22 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./Components/Home.jsx";
-import About from "./Components/About.jsx";
-import Root from "./Components/Root.jsx";
+
 import Pet from "./Components/Pets/Pet.jsx";
 import ShowDetails from "./Components/Pets/ShowDetails.jsx";
-import Register from "./Components/Register.jsx";
 import Context from "./Components/ContextApiSet/Context.jsx";
-import Login from "./Components/Login.jsx";
 import PrivateRoute from "./Components/Private/PrivateRoute.jsx";
-import Success from "./Components/Success.jsx";
 import AnimalHospital from "./Components/Hospital/AnimalHospital.jsx";
 import AccessoriesIteams from "./Components/PetAccos/AccessoriesIteams.jsx";
-import Accessories from "./Components/PetAccos/Accessories.jsx";
+import Accessories from "./Components/PetAccos/HomeComponentsAccessories.jsx";
 import AccessoriesDetails from "./Components/PetAccos/AccessoriesDetails.jsx";
+import Home from "./Components/LayOuts/Home.jsx";
+import Root from "./Components/LayOuts/Root.jsx";
+import Register from "./Components/Pages/Register.jsx";
+import Login from "./Components/Pages/Login.jsx";
+import Success from "./Components/Pages/Success.jsx";
+import About from "./Components/Pages/About.jsx";
+import HomeComponentsAccessories from "./Components/PetAccos/HomeComponentsAccessories.jsx";
 
 
 const router = createBrowserRouter([
@@ -99,6 +101,10 @@ const router = createBrowserRouter([
         path: "/success",
         element: <Success></Success>,
       },
+      {
+        path: "hacc",
+        element: <HomeComponentsAccessories></HomeComponentsAccessories>
+      }
     ],
   },
 ]);

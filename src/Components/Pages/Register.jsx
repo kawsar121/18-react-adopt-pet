@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CreatContext } from "./ContextApiSet/Context";
+import { CreatContext } from "../ContextApiSet/Context";
 import { Link } from "react-router-dom";
 
 const Register = () => {

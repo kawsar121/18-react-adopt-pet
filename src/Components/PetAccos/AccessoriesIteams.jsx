@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Filter from "../Theme/FiltersAll/Filter";
+import AccesoriesCart from "./AccesoriesCart";
+import FilterAccessories from "./FilterAccessories";
 
 const AccessoriesIteams = () => {
   const [loading, setLoading] = useState(true);
   const [tem, setTem] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null); // Modal এর জন্য item
-
-  // ডেটা লোড
+  const [showAll, setShowAll] = useState(false);   //for show all data
+  // data load
   useEffect(() => {
     fetch("/petitems.json")
       .then((res) => res.json())
@@ -20,11 +23,11 @@ const AccessoriesIteams = () => {
       });
   }, []);
 
-  if (loading) return <p className="text-center">লোড হচ্ছে...</p>;
+  if (loading) return <p className="text-center">Loading...</p>;
 
   return (
     <div className="p-6 mt-10 md:mt-14">
-      {/* ব্যানার */}
+      {/* Banner */}
       <div>
         <h1 className="text-2xl whitespace-nowrap md:text-5xl text-slate-800 mb-8 font-semibold">
           Pet Food And Accessories
@@ -33,22 +36,23 @@ const AccessoriesIteams = () => {
           src="https://amarpet.com/_next/image?url=https%3A%2F%2Famarpet-space.sgp1.digitaloceanspaces.com%2Fproduction%2Flanding-page%2Fdiscount_banner&w=1920&q=50"
           alt="banner"
         />
-        <div className="flex justify-between mt-10">
-          <h2 className="text-2xl">Food & Accessories</h2>
-          <Link to="/items" className="text-pink-600 font-medium">
-            View All ▶
+        <div className="flex justify-between gap-20 lg:0 mt-10">
+          <h2 className="text-base md:text-2xl whitespace-nowrap">Food & Accessories</h2>
+          <Link onClick={() => setShowAll(!showAll)} to="/items" className="text-pink-600 font-medium whitespace-nowrap">
+             {showAll ? "Show Less◀️ " : "Show All▶️"}
           </Link>
         </div>
       </div>
 
-      {/* কার্ড */}
+      <div className="flex flex-col md:flex-row p-4 space-x-0 md:space-x-4 space-y-4 md:space-y-0 min-h-screen">
+        {/* Card */}
       <div className="grid justify-center md:grid-cols-3 lg:grid-cols-4 gap-10 mt-10">
-        {tem.map((dataload) => (
+        {(showAll ? tem : tem.slice(0, 8)).map((dataload) => (
           <div
             key={dataload.id}
-            className="max-w-xs bg-white rounded-xl shadow hover:shadow-lg transition p-4 relative group"
-          >
-            {/* ডিসকাউন্ট */}
+            className="max-w-xs w-full bg-white rounded-xl shadow hover:shadow-lg transition p-4 relative group flex flex-col"
+            >
+            {/* Discount */}
             <span className="absolute top-2 z-20 left-2 bg-red-600 text-white text-sm px-2 py-1 rounded-full">
               {dataload.discount_price}
             </span>
@@ -62,20 +66,6 @@ const AccessoriesIteams = () => {
 
             {/* Button icon */}
             <div className="absolute top-8 right-[7px] flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition duration-300">
-              <button className="w-9 h-9 bg-white border-2 rounded-full flex items-center justify-center">
-                <svg
-                  width="14"
-                  height="12"
-                  viewBox="0 0 14 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.375 11.0489L12.3334 1.24894C12.3334 0.632819 11.8561 0.133789 11.2668 0.133789H7.0001H2.73343C2.1441 0.133789 1.66676 0.632819 1.66676 1.24894L0.625164 11.0489C0.609698 11.1253 0.600098 11.2039 0.600098 11.2853C0.600098 11.9014 1.07743 12.4005 1.66676 12.4005H7.0001H12.3334C12.9228 12.4005 13.4001 11.9014 13.4001 11.2853C13.4001 11.2039 13.3905 11.1253 13.375 11.0489ZM9.66676 2.87037V3.47924C9.66676 5.01648 8.4705 6.26712 7.0001 6.26712C5.5297 6.26712 4.33343 5.01648 4.33343 3.47924V2.87037C4.02356 2.75551 3.8001 2.44884 3.8001 2.0853C3.8001 1.62363 4.1585 1.24894 4.6001 1.24894C5.0417 1.24894 5.4001 1.62363 5.4001 2.0853V3.47924C5.4001 4.40147 6.11796 5.15197 7.0001 5.15197C7.88223 5.15197 8.6001 4.40147 8.6001 3.47924V2.0853C8.6001 1.62363 8.9585 1.24894 9.4001 1.24894C9.8417 1.24894 10.2001 1.62363 10.2001 2.0853C10.2001 2.44884 9.97663 2.75551 9.66676 2.87037Z"
-                    fill="#1455ac"
-                  ></path>
-                </svg>
-              </button>
 
               {/* Drawer with button start */}
 
@@ -173,7 +163,7 @@ const AccessoriesIteams = () => {
             </p> */}
             <div className="text-center mt-3">
               <span className="line-through text-gray-500 mr-2">
-                {dataload.price}
+                {dataload.discount_price}
               </span>
               <span className="text-md font-bold text-black">
                 {dataload.price}
@@ -181,9 +171,10 @@ const AccessoriesIteams = () => {
             </div>
 
             {/* বাটন */}
-            <button
+            <div className="mt-auto">
+              <button
               onClick={() => setSelectedItem(dataload)}
-              className="mt-3 px-6 py-1 bg-blue-600 bg-transparent border-2 border-cyan-500 text-black hover:text-white rounded-lg hover:bg-blue-700"
+              className="mt-3  px-6 py-1 bg-blue-600 bg-transparent border-2 border-cyan-500 text-black hover:text-white rounded-lg hover:bg-blue-700"
             >
               <div className="flex items-center gap-1">
                 <div>
@@ -226,10 +217,21 @@ const AccessoriesIteams = () => {
                 <div>Buy Now</div>
               </div>
             </button>
+            </div>
           </div>
         ))}
       </div>
+      </div>
 
+
+
+      <AccesoriesCart></AccesoriesCart>
+
+
+      {/* Futer Deals */}
+      <FilterAccessories></FilterAccessories>
+        
+      
       {/* Modal */}
       {selectedItem && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">

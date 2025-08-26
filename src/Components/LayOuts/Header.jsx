@@ -1,6 +1,7 @@
 import React from 'react';
-import cat from '../assets/pet.webp';
-import AutoSlider from './Theme/AutoSlider';
+import cat from '../../assets/pet.webp';
+import AutoSlider from '../Theme/AutoSlider';
+// import AutoSlider from './Theme/AutoSlider';
 
 const Header = () => {
     return (

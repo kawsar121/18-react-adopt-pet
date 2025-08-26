@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { CreatContext } from "./ContextApiSet/Context";
+import { CreatContext } from "../ContextApiSet/Context";
 
 const Success = () => {
   const { adoptions, deleteAdoption } = useContext(CreatContext);

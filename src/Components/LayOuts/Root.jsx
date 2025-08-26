@@ -1,8 +1,9 @@
 import React from 'react';
 import Nav from './Nav';
 import { Outlet } from 'react-router-dom';
-import Footer from './Footer';
-import AutoSlider from './Theme/AutoSlider';
+// import Footer from './Footer';
+import AutoSlider from '../Theme/AutoSlider';
+import Footer from '../Footers/Footer';
 
 const Root = () => {
     return (

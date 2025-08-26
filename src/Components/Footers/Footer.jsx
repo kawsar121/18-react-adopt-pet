@@ -1,8 +1,10 @@
 import React from "react";
+import AcccessoriesFooters from "./AcccessoriesFooters";
 
 const Footer = () => {
   return (
     <div className="mt-20">
+      <AcccessoriesFooters></AcccessoriesFooters>
       <footer className="footer flex justify-between sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
         <aside className="grid-flow-col items-center">
           <svg

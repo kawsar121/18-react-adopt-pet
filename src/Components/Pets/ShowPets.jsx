@@ -7,7 +7,7 @@ const ShowPets = ({ petCategory }) => {
   return (
     <div className="p-3 bg-base-100 shadow-xl">
       <figure>
-        <img src={image} alt="Pet Max" className=" w-full rounded-md h-64" />
+        <img src={image} alt="Pet Max" className=" w-full rounded-md h-60  transform scale-110 hover:scale-100 transition-transform duration-500 " />
       </figure>
       <div className="card-body text-center">
         <h2 className="text-orange-600 text-lg font-semibold">

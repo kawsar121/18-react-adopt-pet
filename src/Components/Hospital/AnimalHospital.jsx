@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import HospitalView from "./HospitalView";
 import AutoSlider from "../Theme/AutoSlider";
+import { useState } from "react";
 
 const AnimalHospital = () => {
   const hos = useLoaderData();
@@ -28,6 +29,7 @@ const AnimalHospital = () => {
       <HospitalView key={hospital.id} pital={hospital} />
     ))}
   </div>
+      
     </div>
 
   );

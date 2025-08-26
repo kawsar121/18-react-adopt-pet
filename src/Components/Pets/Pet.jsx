@@ -5,6 +5,7 @@ import ShowPets from './ShowPets';
 import noData from '../../assets/error.webp'
 import AccessoriesIteams from '../PetAccos/AccessoriesIteams';
 import LifeStyle from './LifeStyle';
+import HomeComponentsAccessories from '../PetAccos/HomeComponentsAccessories';
 
 const Pet = () => {
     const {data} = useLoaderData();
@@ -29,11 +30,8 @@ const Pet = () => {
             </div>
 
             
-            {/* Accesories Iteam Component */}
-            <div className='mt-20'>
-                <AccessoriesIteams></AccessoriesIteams>
-            </div>
-
+                {/* Accessories Iteam */}
+            <HomeComponentsAccessories></HomeComponentsAccessories>
             
             
         </div>
