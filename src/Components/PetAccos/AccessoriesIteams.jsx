@@ -133,7 +133,7 @@ const AccessoriesIteams = () => {
               {/* adjust Modal */}
               {/* You can open the modal using document.getElementById('ID').showModal() method */}
               <Link
-                to="/details"
+                to={`/petid/${dataload.id}`}
                 className=""
                 // onClick={() => document.getElementById("my_modal_3").showModal()}
               >
@@ -267,7 +267,7 @@ const AccessoriesIteams = () => {
                 Close
               </button> */}
               <Link
-                to="/details"
+                to={`/petid/${selectedItem.id}`}  
                 className="px-4 py-2 bg-gray-400 text-white rounded-lg"
               >
                 Details

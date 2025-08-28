@@ -9,6 +9,7 @@ export default {
   },
   plugins: [
     require('daisyui'),
+     require('@tailwindcss/line-clamp'),
   ],
   daisyui: {
     themes: ["light", "dark", "retro", "cyberpunk", "valentine", "aqua"],

@@ -77,10 +77,21 @@ const router = createBrowserRouter([
         path:"/items",
         element: <AccessoriesIteams></AccessoriesIteams>,
       },
-      {
-        path:"/details",
-        element: <PrivateRoute><AccessoriesDetails></AccessoriesDetails></PrivateRoute>
-      },
+      // {
+      //   path:"/details",
+      //   element: <PrivateRoute><AccessoriesDetails></AccessoriesDetails></PrivateRoute>,
+      //   loader : ()=> fetch(``)
+      // },
+       {
+  path:"/petid/:id",
+  element: <PrivateRoute><AccessoriesDetails></AccessoriesDetails></PrivateRoute>,
+  loader: async ({ params }) => {
+    const res = await fetch("/petitems.json"); // পুরো ফাইল লোড করো
+    const data = await res.json();
+    const singleItem = data.find(item => item.id === parseInt(params.id));
+    return singleItem;
+  }
+},
       {
         path: "/menu",
         element: <h1 className="mt-44 text-red-600 text-4xl">Menu updating! </h1>,

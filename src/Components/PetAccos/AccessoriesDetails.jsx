@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const AccessoriesDetails = ({loo}) => {
+  const detailsIteam = useLoaderData();
+  console.log(detailsIteam)
     return (
         <div>
             
-              <div className=" bg-white px-3 py-2 ">
+              <div className=" bg-white px-3 py-2 pt-20">
                 <form method="dialog">
                     
                   {/* if there is a button in form, it will close the modal */}
-                  <Link to="/items" className="btn bg-gray-300 btn-sm btn-circle btn-ghost absolute right-[3rem] md:right-[20rem] top-24 ">
+                  <Link to="/items" className="btn bg-gray-300 btn-sm btn-circle btn-ghost absolute right-[3rem] md:right-[20rem] top-32 ">
                     ✕ 
                   </Link>
                 </form>
@@ -17,11 +19,11 @@ const AccessoriesDetails = ({loo}) => {
                   {/* card */}
                   <div className="max-w-xs  text-white rounded-xl relative group p-4 ">
                     <span className="absolute top-2 left-2 bg-red-600 text-white text-sm px-2 py-1 rounded-full">
-                      -$233
+                      {detailsIteam.discount_price}
                     </span>
 
                     <img
-                      src="https://amarpet.com/_next/image?url=https%3A%2F%2Famarpet.blob.core.windows.net%2Fproduction%2Fdaa96d9681a21445772454cbddf0cac1%2FLWfJbhYmEbr6VKTOBLTAZWHJsNl11S-metaUGV0LWhhcm5lc3MucG5n-.png&w=640&q=75"
+                      src={detailsIteam.accessories_image}
                       alt="Charger"
                       className="rounded-xl mx-auto w-48"
                     />
@@ -80,21 +82,21 @@ const AccessoriesDetails = ({loo}) => {
                     </button>
                     <div className=" mt-4 items-center flex gap-1">
                       <span className="line-through text-gray-500 mr-2">
-                        $118
+                        {detailsIteam.discount_price}
                       </span>
                       <span className="text-2xl font-bold text-blue-800">
-                        $115
+                        {detailsIteam.price}
                       </span>
                       <button className="bg-red-600 text-sm font-bold text-white px-2 rounded-sm">
-                        $0 SAVE
+                        $20 SAVE
                       </button>
                       <p className="text-xs">(TAX INCLUDED)</p>
                     </div>
                     <div className="mt-6 flex gap-3">
-                      <button className="bg-orange-300 px-8 py-3">
+                      <button className="bg-orange-300 hover:bg-orange-400 px-8 py-3">
                         Buy Now
                       </button>
-                      <button className="bg-blue-300 px-8 py-3">
+                      <button className="bg-blue-300 hover:bg-blue-400 px-8 py-3">
                         Add to Cart
                       </button>
                     </div>
